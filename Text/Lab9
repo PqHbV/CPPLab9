@@ -1,0 +1,44 @@
+Ryan Taylor
+Lab 9
+
+1.)
+    ifstream fin;
+    ofstream fout;
+    #include <fstream>
+
+2.)
+    
+3.)
+4.)
+5.)
+6.)
+7.)
+8.)
+9.)
+10.)
+11.)
+12.)
+13.)
+14.)
+15.)
+16.)
+17.)
+
+Lab # 9 – Part One
+	Self-Test Exercises from Chapter twelve
+
+•	Problems 1-5 on page 528
+•	Problems 6-7 on page 532
+•	Problems 8-12  on page 540
+•	Problems 13-17 on page 551
+
+Lab # 9 – Part Two
+	Programming Project #4 on page 562
+
+•	Do not close and reopen stream as directed, instead clear and reset cursor
+•	Assume the file exists and has at least one number in it.
+•	Output the results to the end of the same file and cout using a function
+o	Average =
+o	Standard Deviation =
+•	Function should be written so that it can be called for either outputStream
+•	Attach printout of solution with lab, electronic copy is not required.
