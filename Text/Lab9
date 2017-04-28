@@ -7,22 +7,76 @@ Lab 9
     #include <fstream>
 
 2.)
-    
+    fin.open("stuff1.txt");
+    if (fin.fail()){
+        cout << "Input file opening failed.\n";
+        exit(1);
+    }
+    fout.open("stuff2.txt");
+    if (fout.fail()){
+        cout << "Output file opening failed.\n";
+    exit(1);
+    }
 3.)
+    fin.close());
+    fout.close();
 4.)
+    outStream needs to be replaced with cout.
 5.)
+    Close the file and re open it.
 6.)
+    1
+    2
+    3
 7.)
+    void toScreen(ifstream& fileStream){
+        int next;
+    while (fileStream >> next)
+        cout << next << endl;
+    }
 8.)
+    * 123*123*
+    * 123*123*
 9.)
+    * 123*123 * 123*
 10.)
+    * 123*123*
+    * +123*+123*
+    *123 *123 *
 11.)
+    * 123*123*
+    * +123*+123*
+    *123 *123 *
 12.)
+    *12345*
 13.)
+    cin - istream
+    cout - ostream
 14.)
+    void copyChar(istream& sourceFile){
+        char next;
+        sourceFile.get(next);
+        cout << next;
+    }
 15.)
+    void copyLine(istream& sourceFile){
+        char next;
+    do{
+        sourceFile.get(next);
+        cout << next;
+    }while (next != '\n');
+    }
 16.)
-17.)
+    void sendLine(ostream& targetStream){
+        char next;
+    do{
+        cin.get(next);
+        targetStream << next;
+    }while (next != '\n');
+    }
+17.) False
+    Replace istream with ifstream
+
 
 Lab # 9 – Part One
 	Self-Test Exercises from Chapter twelve
