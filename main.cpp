@@ -23,7 +23,7 @@ int main() {
     afile.open(fileName);
     //checking if file is open
     if (!afile.is_open()) {
-        cerr << "unable to open " << fileName << endl;
+        cerr << "unable to open the file" << endl; // VS does not like this part << fileName << endl;
     }
     else {//read entire file and output to screen
         while (!afile.eof()) {  // eof returns true if we have tried to read and nothing is left
@@ -32,17 +32,18 @@ int main() {
             counter++;
         }
         average = average/counter;
-        afile.close();
+        //afile.close();//Dont close the file
     }
     counter = 0;
-    afile.clear();
+    afile.clear();          //Clears EOF FLag
+    afile.seekg(0, ios::beg);//Move Cursor back to the beginning.
     while (!afile.eof()) {  // eof returns true if we have tried to read and nothing is left
         afile>>temp;
         sDev+=(pow(temp-average, 2));
         counter++;
     }
     sDev = sDev/counter;
-    sDev = sqrt(sDev);
+    //sDev = sqrt(sDev); This step is not needed
     afile.close();
     printOut(average, sDev);
 
